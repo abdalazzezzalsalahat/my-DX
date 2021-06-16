@@ -1,0 +1,16 @@
+{% include '_base.html' %}
+{% include 'snacks/base.html' %}
+
+{% block info %}
+
+<h1>Delete order</h1>
+
+<form action="" method="post">
+  <div class="form-group">
+    {% csrf_token %}
+    <h2>Do you really want to delete "{{ snack.name }}"?</h2>
+    <input type="submit" value="Yes">
+  </div>
+</form>
+
+{% endblock info %}

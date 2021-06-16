@@ -1,0 +1,17 @@
+{% include '_base.html' %}
+{% include 'snacks/base.html' %}
+
+{% block info %}
+
+<h1>Create order</h1>
+
+<form action="" method="POST">
+  <div class="form-group">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <input type="submit" value="Order">
+  </div>
+</form>
+
+{% endblock info %}
+

@@ -1,0 +1,14 @@
+{% include '_base.html' %}
+{% include 'snacks/base.html' %}
+
+{% block info %}
+<h1>Update Page</h1>
+<form action="" method="post">
+  <div class="form-group">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <input type="submit" value="Save">
+  </div>
+</form>
+
+{% endblock info %}

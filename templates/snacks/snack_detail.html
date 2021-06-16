@@ -1,0 +1,19 @@
+{% include '_base.html' %}
+{% include 'snacks/base.html' %}
+
+{% block info %}
+    <h1>Purchaser detailed order:</h1>
+    <h2>{{ snack.title }}</h2>
+    <p>Purchaser: {{ snack.purchaser }}</p>
+    <small>Description: {{ snack.description }}</small>
+
+    <ul class="">
+        <li>
+            <a href="{% url 'snack_update' snack.pk %}">+ Update order</a>
+        </li>
+        <li>
+            <a href="{% url 'snack_delete' snack.pk %}">+ Delete order</a>
+        </li>
+    </ul>
+
+{% endblock info %}
