@@ -1,0 +1,11 @@
+{% include '_base.html' %}
+{% include 'snacks/base.html' %}
+
+
+{% block info %}
+    {% for snack in object_list %}
+        <ul class="list-group">
+            <h2 class="list-group-item"><a href="{% url 'snack_detail' snack.pk %}">{{ snack.title }}</a></h2>
+        </ul>
+    {% endfor %}
+{% endblock info %}
